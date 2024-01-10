@@ -1,0 +1,107 @@
+
+pc@Pablo MINGW64 ~
+$ cd
+
+pc@Pablo MINGW64 ~
+$ D:\Program Files\Aplicaciones Web\Practica-Git
+bash: D:Program: command not found
+
+//ingresar en carpeta
+pc@Pablo MINGW64 ~
+$ cd "D:\Program Files\Aplicaciones Web\Practica-Git"
+
+//iniciar
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git
+$ git init
+Initialized empty Git repository in D:/Program Files/Aplicaciones Web/Practica-Git/.git/
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git config user.name "codemasterg19"
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git config user.email "pablo_jmz1@hotmail.com"
+
+//origin es el nombre de la conexion
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git remote add origin https://github.com/codemasterg19/Prueba-Git.git
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        Prueba.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git add Prueba.txt
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Prueba.txt
+
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git commit -m "añadiendo archivo Prueba.txt"
+[master (root-commit) ae6ea6a] añadiendo archivo Prueba.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 Prueba.txt
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git status
+On branch master
+nothing to commit, working tree clean
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ ^C
+
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git push -u origin master
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 236 bytes | 236.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/codemasterg19/Prueba-Git.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+//VER RAMA
+pc@Pablo MINGW64 /d/Program Files/Aplicaciones Web/Practica-Git (master)
+$ git branch
+* master
+
+//CREAR RAMA
+$ git branch version1
+
+//cambiar de rama
+ git checkout version1
+
+//creamos un archivo en la rama
+touch "pruebaVersion1.txt"
+
+//añadimos los archivos a la rama
+git add .
+
+//confirmar 
+git commit -m "añadido 2 txt a la rama version1"
+
+//cambiamos de rama
+git checkout master
+
+//diferencia entre ramas
+git diff version1 master
+
+//fucionar ramas
+git merge version1 master
+
+
